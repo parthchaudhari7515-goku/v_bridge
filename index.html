@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vipulkumar Chaudhari - Mechanical Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        .typing-text::after {
+            content: '|';
+            animation: blink 1s infinite;
+        }
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .glass-effect {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease;
+        }
+        .scroll-reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .carousel-container {
+            scroll-snap-type: x mandatory;
+        }
+        .carousel-item {
+            scroll-snap-align: start;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-2xl font-bold text-gray-900">Vipul Chaudhari</div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-blue-600 transition-colors">Home</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-blue-600 transition-colors">About</a>
+                    <a href="#experience" class="nav-link text-gray-700 hover:text-blue-600 transition-colors">Experience</a>
+                    <a href="#projects" class="nav-link text-gray-700 hover:text-blue-600 transition-colors">Projects</a>
+                    <a href="#skills" class="nav-link text-gray-700 hover:text-blue-600 transition-colors">Skills</a>
+                    <a href="#gallery" class="nav-link text-gray-700 hover:text-blue-600 transition-colors">Gallery</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-blue-600 transition-colors">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="md:hidden hidden pb-4">
+                <div class="space-y-2">
+                    <a href="#home" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">Home</a>
+                    <a href="#about" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">About</a>
+                    <a href="#experience" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">Experience</a>
+                    <a href="#projects" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">Projects</a>
+                    <a href="#skills" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">Skills</a>
+                    <a href="#gallery" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">Gallery</a>
+                    <a href="#contact" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center gradient-bg text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="text-center scroll-reveal">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6">
+                    <span id="typing-text" class="typing-text"></span>
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 text-gray-200">Mechanical Engineer | CAD Specialist | Innovation Enthusiast</p>
+                <p class="text-lg mb-12 max-w-3xl mx-auto text-gray-300">
+                    Passionate mechanical engineer with expertise in AutoCAD, ANSYS, and innovative design solutions. 
+                    Committed to leveraging technology for sustainable engineering practices.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#contact" class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors">
+                        Get In Touch
+                    </a>
+                    <a href="#projects" class="border border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                        View My Work
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-16 scroll-reveal">About Me</h2>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="scroll-reveal">
+                    <div class="bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl p-8 text-white">
+                        <h3 class="text-2xl font-bold mb-4">Personal Details</h3>
+                        <div class="space-y-3">
+                            <p><strong>Name:</strong> Vipulkumar Chaudhari</p>
+                            <p><strong>Email:</strong> <a href="mailto:vipul.chaudhari@email.com" class="hover:underline">vipul.chaudhari@email.com</a></p>
+                            <p><strong>Phone:</strong> <a href="tel:+919876543210" class="hover:underline">+91 98765 43210</a></p>
+                            <p><strong>Location:</strong> Gujarat, India</p>
+                            <p><strong>Instagram:</strong> <a href="https://instagram.com/v_bridge" target="_blank" class="hover:underline">@v_bridge</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="scroll-reveal">
+                    <h3 class="text-2xl font-bold mb-6">Education</h3>
+                    <div class="space-y-6">
+                        <div class="bg-gray-50 p-6 rounded-xl">
+                            <h4 class="text-xl font-semibold text-blue-600 mb-2">M.Tech in Mechanical Engineering</h4>
+                            <p class="text-gray-600 mb-2">Specialization: Design & Manufacturing</p>
+                            <p class="text-sm text-gray-500">2020-2022</p>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-xl">
+                            <h4 class="text-xl font-semibold text-blue-600 mb-2">B.E. in Mechanical Engineering</h4>
+                            <p class="text-gray-600 mb-2">Gujarat Technological University</p>
+                            <p class="text-sm text-gray-500">2016-2020</p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-2xl font-bold mb-6 mt-8">Elective Subjects</h3>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="bg-blue-50 text-blue-800 px-3 py-2 rounded-lg text-center">CAD/CAM</div>
+                        <div class="bg-green-50 text-green-800 px-3 py-2 rounded-lg text-center">FEA</div>
+                        <div class="bg-purple-50 text-purple-800 px-3 py-2 rounded-lg text-center">Design Engineering</div>
+                        <div class="bg-orange-50 text-orange-800 px-3 py-2 rounded-lg text-center">Manufacturing</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-16 scroll-reveal">Experience</h2>
+            
+            <div class="space-y-8">
+                <div class="bg-white rounded-xl shadow-lg p-8 scroll-reveal">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Design Engineer</h3>
+                            <p class="text-blue-600 font-semibold">Engineering Solutions Pvt. Ltd.</p>
+                        </div>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">2022 - Present</span>
+                    </div>
+                    <p class="text-gray-600">
+                        Leading design projects using AutoCAD and ANSYS, focusing on mechanical systems optimization 
+                        and sustainable engineering solutions. Collaborated with cross-functional teams to deliver 
+                        innovative products.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-8 scroll-reveal">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Junior Engineer</h3>
+                            <p class="text-blue-600 font-semibold">Tech Manufacturing Ltd.</p>
+                        </div>
+                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">2020 - 2022</span>
+                    </div>
+                    <p class="text-gray-600">
+                        Assisted in design and analysis projects, gained expertise in CAD software, and participated 
+                        in product development cycles. Contributed to process improvements and quality assurance.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-16 scroll-reveal">Projects & Publications</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- M.Tech Project -->
+                <div class="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-xl p-8 scroll-reveal hover:transform hover:scale-105 transition-all duration-300">
+                    <div class="bg-blue-600 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
+                        <i data-lucide="graduation-cap" class="w-6 h-6 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-900">M.Tech Project</h3>
+                    <p class="text-gray-600 mb-4">
+                        Advanced Mechanical Design Optimization using FEA and computational methods for 
+                        sustainable engineering applications.
+                    </p>
+                    <span class="text-sm text-blue-600 font-medium">2022</span>
+                </div>
+
+                <!-- B.E. Project -->
+                <div class="bg-gradient-to-br from-green-50 to-emerald-100 rounded-xl p-8 scroll-reveal hover:transform hover:scale-105 transition-all duration-300">
+                    <div class="bg-green-600 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
+                        <i data-lucide="cog" class="w-6 h-6 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-900">B.E. Final Year Project</h3>
+                    <p class="text-gray-600 mb-4">
+                        Design and Development of Automated Manufacturing System with focus on efficiency 
+                        and cost optimization.
+                    </p>
+                    <span class="text-sm text-green-600 font-medium">2020</span>
+                </div>
+
+                <!-- Publication -->
+                <div class="bg-gradient-to-br from-purple-50 to-violet-100 rounded-xl p-8 scroll-reveal hover:transform hover:scale-105 transition-all duration-300">
+                    <div class="bg-purple-600 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
+                        <i data-lucide="book-open" class="w-6 h-6 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-900">Research Publication</h3>
+                    <p class="text-gray-600 mb-4">
+                        "Innovative Approaches in Mechanical Design" - Published in International Journal 
+                        of Mechanical Engineering Research.
+                    </p>
+                    <span class="text-sm text-purple-600 font-medium">2023</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-16 scroll-reveal">Skills & Expertise</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Technical Skills -->
+                <div class="bg-white rounded-xl shadow-lg p-8 scroll-reveal">
+                    <h3 class="text-2xl font-bold mb-6 text-blue-600">Technical Skills</h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <span>AutoCAD</span>
+                            <div class="w-32 bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full w-[90%]"></div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span>ANSYS</span>
+                            <div class="w-32 bg-gray-200 rounded-full h-2">
+                                <div class="bg-green-600 h-2 rounded-full w-[85%]"></div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span>SolidWorks</span>
+                            <div class="w-32 bg-gray-200 rounded-full h-2">
+                                <div class="bg-purple-600 h-2 rounded-full w-[80%]"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Programming Skills -->
+                <div class="bg-white rounded-xl shadow-lg p-8 scroll-reveal">
+                    <h3 class="text-2xl font-bold mb-6 text-green-600">Programming</h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <span>C/C++</span>
+                            <div class="w-32 bg-gray-200 rounded-full h-2">
+                                <div class="bg-green-600 h-2 rounded-full w-[75%]"></div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span>Sci-Lab</span>
+                            <div class="w-32 bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full w-[70%]"></div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span>MATLAB</span>
+                            <div class="w-32 bg-gray-200 rounded-full h-2">
+                                <div class="bg-orange-600 h-2 rounded-full w-[65%]"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Software Skills -->
+                <div class="bg-white rounded-xl shadow-lg p-8 scroll-reveal">
+                    <h3 class="text-2xl font-bold mb-6 text-purple-600">Software Proficiency</h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <span>Microsoft Office</span>
+                            <div class="w-32 bg-gray-200 rounded-full h-2">
+                                <div class="bg-purple-600 h-2 rounded-full w-[95%]"></div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span>Project Management</span>
+                            <div class="w-32 bg-gray-200 rounded-full h-2">
+                                <div class="bg-teal-600 h-2 rounded-full w-[80%]"></div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span>Technical Documentation</span>
+                            <div class="w-32 bg-gray-200 rounded-full h-2">
+                                <div class="bg-indigo-600 h-2 rounded-full w-[90%]"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workshops & Seminars -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-16 scroll-reveal">Workshops & Seminars</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="space-y-6 scroll-reveal">
+                    <h3 class="text-2xl font-bold text-blue-600 mb-6">Workshops Attended</h3>
+                    <div class="bg-blue-50 p-6 rounded-xl">
+                        <h4 class="font-bold text-gray-900 mb-2">Advanced CAD Techniques</h4>
+                        <p class="text-gray-600 text-sm">Industry-focused workshop on modern CAD practices and automation</p>
+                        <span class="text-xs text-blue-600">2023</span>
+                    </div>
+                    <div class="bg-green-50 p-6 rounded-xl">
+                        <h4 class="font-bold text-gray-900 mb-2">Finite Element Analysis</h4>
+                        <p class="text-gray-600 text-sm">Comprehensive training on ANSYS and simulation techniques</p>
+                        <span class="text-xs text-green-600">2022</span>
+                    </div>
+                    <div class="bg-purple-50 p-6 rounded-xl">
+                        <h4 class="font-bold text-gray-900 mb-2">Sustainable Engineering</h4>
+                        <p class="text-gray-600 text-sm">Focus on eco-friendly design practices and materials</p>
+                        <span class="text-xs text-purple-600">2023</span>
+                    </div>
+                </div>
+
+                <div class="space-y-6 scroll-reveal">
+                    <h3 class="text-2xl font-bold text-orange-600 mb-6">Seminars & Conferences</h3>
+                    <div class="bg-orange-50 p-6 rounded-xl">
+                        <h4 class="font-bold text-gray-900 mb-2">International Mechanical Engineering Conference</h4>
+                        <p class="text-gray-600 text-sm">Presented research on innovative design methodologies</p>
+                        <span class="text-xs text-orange-600">2023</span>
+                    </div>
+                    <div class="bg-teal-50 p-6 rounded-xl">
+                        <h4 class="font-bold text-gray-900 mb-2">Industry 4.0 in Manufacturing</h4>
+                        <p class="text-gray-600 text-sm">Seminar on digital transformation in manufacturing</p>
+                        <span class="text-xs text-teal-600">2022</span>
+                    </div>
+                    <div class="bg-indigo-50 p-6 rounded-xl">
+                        <h4 class="font-bold text-gray-900 mb-2">Future of Mechanical Engineering</h4>
+                        <p class="text-gray-600 text-sm">Panel discussion on emerging trends and technologies</p>
+                        <span class="text-xs text-indigo-600">2023</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Gallery Section -->
+    <section id="gallery" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-8 scroll-reveal">Instagram Gallery</h2>
+            <p class="text-center text-gray-600 mb-12">Follow my journey on <a href="https://instagram.com/v_bridge" target="_blank" class="text-blue-600 hover:underline font-semibold">@v_bridge</a></p>
+            
+            <!-- Main Carousel -->
+            <div class="relative mb-8 scroll-reveal">
+                <div id="carousel" class="flex overflow-x-hidden carousel-container rounded-xl">
+                    <div class="carousel-item flex-shrink-0 w-full h-96 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <i data-lucide="camera" class="w-16 h-16 mx-auto mb-4"></i>
+                            <h3 class="text-2xl font-bold mb-2">Engineering Projects</h3>
+                            <p>CAD designs and technical drawings</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item flex-shrink-0 w-full h-96 bg-gradient-to-br from-green-400 to-green-600 rounded-xl flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <i data-lucide="settings" class="w-16 h-16 mx-auto mb-4"></i>
+                            <h3 class="text-2xl font-bold mb-2">Workshop Sessions</h3>
+                            <p>Behind the scenes of engineering work</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item flex-shrink-0 w-full h-96 bg-gradient-to-br from-purple-400 to-purple-600 rounded-xl flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <i data-lucide="award" class="w-16 h-16 mx-auto mb-4"></i>
+                            <h3 class="text-2xl font-bold mb-2">Achievements</h3>
+                            <p>Awards and recognition moments</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item flex-shrink-0 w-full h-96 bg-gradient-to-br from-orange-400 to-orange-600 rounded-xl flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <i data-lucide="users" class="w-16 h-16 mx-auto mb-4"></i>
+                            <h3 class="text-2xl font-bold mb-2">Team Collaborations</h3>
+                            <p>Working with amazing colleagues</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Carousel Controls -->
+                <button id="prevBtn" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white rounded-full p-3 shadow-lg transition-colors">
+                    <i data-lucide="chevron-left" class="w-6 h-6 text-gray-800"></i>
+                </button>
+                <button id="nextBtn" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white rounded-full p-3 shadow-lg transition-colors">
+                    <i data-lucide="chevron-right" class="w-6 h-6 text-gray-800"></i>
+                </button>
+            </div>
+
+            <!-- Thumbnail Navigation -->
+            <div class="flex justify-center space-x-4 mb-8 scroll-reveal">
+                <button class="carousel-thumb w-16 h-16 bg-blue-600 rounded-lg opacity-100" data-index="0"></button>
+                <button class="carousel-thumb w-16 h-16 bg-green-600 rounded-lg opacity-50" data-index="1"></button>
+                <button class="carousel-thumb w-16 h-16 bg-purple-600 rounded-lg opacity-50" data-index="2"></button>
+                <button class="carousel-thumb w-16 h-16 bg-orange-600 rounded-lg opacity-50" data-index="3"></button>
+            </div>
+
+            <!-- Instagram Link -->
+            <div class="text-center">
+                <a href="https://instagram.com/v_bridge" target="_blank" class="inline-flex items-center bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-full font-semibold hover:transform hover:scale-105 transition-all duration-300">
+                    <i data-lucide="instagram" class="w-5 h-5 mr-2"></i>
+                    Follow @v_bridge
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-16 scroll-reveal">Get In Touch</h2>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Contact Information -->
+                <div class="scroll-reveal">
+                    <h3 class="text-2xl font-bold mb-8 text-gray-900">Contact Information</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-4 bg-blue-50 p-4 rounded-xl">
+                            <div class="bg-blue-600 p-3 rounded-lg">
+                                <i data-lucide="mail" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-900">Email</p>
+                                <a href="mailto:vipul.chaudhari@email.com" class="text-blue-600 hover:underline">vipul.chaudhari@email.com</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center space-x-4 bg-green-50 p-4 rounded-xl">
+                            <div class="bg-green-600 p-3 rounded-lg">
+                                <i data-lucide="phone" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-900">Phone</p>
+                                <a href="tel:+919876543210" class="text-green-600 hover:underline">+91 98765 43210</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center space-x-4 bg-purple-50 p-4 rounded-xl">
+                            <div class="bg-purple-600 p-3 rounded-lg">
+                                <i data-lucide="map-pin" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-900">Location</p>
+                                <p class="text-purple-600">Gujarat, India</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center space-x-4 bg-orange-50 p-4 rounded-xl">
+                            <div class="bg-orange-600 p-3 rounded-lg">
+                                <i data-lucide="instagram" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-900">Instagram</p>
+                                <a href="https://instagram.com/v_bridge" target="_blank" class="text-orange-600 hover:underline">@v_bridge</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="scroll-reveal">
+                    <h3 class="text-2xl font-bold mb-8 text-gray-900">Send Message</h3>
+                    <form id="contactForm" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Your Name</label>
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Your Email</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Subject</label>
+                            <input type="text" id="subject" name="subject" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer with QR Code -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 items-center">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">Vipulkumar Chaudhari</h3>
+                    <p class="text-gray-300">Mechanical Engineer passionate about innovation and sustainable design solutions.</p>
+                </div>
+                
+                <div class="text-center">
+                    <h4 class="text-lg font-semibold mb-4">Connect with this Portfolio</h4>
+                    <div class="bg-white p-4 rounded-lg inline-block">
+                        <div id="qrcode" class="w-32 h-32 mx-auto"></div>
+                    </div>
+                    <div class="mt-4 space-x-4">
+                        <button id="downloadQR" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm transition-colors">
+                            Download QR
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="text-right">
+                    <div class="flex justify-end space-x-4 mb-4">
+                        <a href="mailto:vipul.chaudhari@email.com" class="bg-gray-800 p-3 rounded-lg hover:bg-gray-700 transition-colors">
+                            <i data-lucide="mail" class="w-5 h-5"></i>
+                        </a>
+                        <a href="tel:+919876543210" class="bg-gray-800 p-3 rounded-lg hover:bg-gray-700 transition-colors">
+                            <i data-lucide="phone" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://instagram.com/v_bridge" target="_blank" class="bg-gray-800 p-3 rounded-lg hover:bg-gray-700 transition-colors">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                    <p class="text-gray-300 text-sm">© 2024 Vipulkumar Chaudhari. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="fixed bottom-8 right-8 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300 opacity-0 invisible">
+        <i data-lucide="arrow-up" class="w-6 h-6"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
