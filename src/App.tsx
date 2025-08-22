@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './index.css'   // 👈 include Tailwind here
 function App() {
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center">
